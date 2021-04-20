@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+body {
+  background: #111111;
+  
+  h1 {
+    font-size: 40px;
+    width: 90%;
+    margin: auto;
+    padding: 30px 0;
+    color: #ffffff;
+  }
+
+  .container {
+    display: grid;
+    grid-gap: 10px 10px;
+    width: 90%;
+    margin: 0 auto 50px auto;
+    grid-template-areas:
+      "one one"
+      "one one"
+      "two three"
+      "four five"
+      "six six"
+      "six six"
+      "seven eight"
+      "nine ten";
+
+    .box {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      filter: grayscale(1);
+      transition: 0.3s;
+
+      &:hover {
+        filter: grayscale(0);
+      }
+
+      .serial-no {
+        position: absolute;
+        padding: 10px;
+        top: 10px;
+        left: 10px;
+        background: #c0c0c0;
+        color: #181818;
+        border-radius: 10px;
+        font-size: 14px;
+      }
+
+      &:hover .serial-no {
+        display: none;
+      }
+
+      .box-img {
+        max-width: 100%;
+      }
+    }
+
+    .box1 {
+      grid-area: one;
+    }
+    .box2 {
+      grid-area: two;
+    }
+    .box3 {
+      grid-area: three;
+    }
+    .box4 {
+      grid-area: four;
+    }
+    .box5 {
+      grid-area: five;
+    }
+    .box6 {
+      grid-area: six;
+    }
+    .box7 {
+      grid-area: seven;
+    }
+    .box8 {
+      grid-area: eight;
+    }
+    .box9 {
+      grid-area: nine;
+    }
+    .box10 {
+      grid-area: ten;
+    }
+  }
+}
+@media (min-width: 426px) {
+  body {
+    .container {
+      grid-template-areas:
+        "one one"
+        "one one"
+        "two three"
+        "four five"
+        "six six"
+        "six six"
+        "seven eight"
+        "nine ten";
+
+      .box {
+        .serial-no {
+          font-size: 16px;
+          padding: 15px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 769px) {
+  body {
+    .container {
+      grid-template-areas:
+        "one one two three"
+        "one one six six"
+        "four five six six"
+        "seven eight nine nine"
+        "ten ten nine nine"
+        "ten ten eleven twelve";
+
+      .box {
+        .serial-no {
+          font-size: 20px;
+          padding: 15px;
+        }
+      }
+    }
+  }
+}
