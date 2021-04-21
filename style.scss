@@ -2,12 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Montserrat;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
   background: #111111;
-  
+
   h1 {
     font-size: 40px;
     width: 90%;
@@ -18,25 +18,29 @@ body {
 
   .container {
     display: grid;
-    grid-gap: 10px 10px;
+    grid-gap: 15px;
     width: 90%;
     margin: 0 auto 50px auto;
     grid-template-areas:
       "one one"
       "one one"
       "two three"
-      "four five"
-      "six six"
-      "six six"
-      "seven eight"
-      "nine ten";
+      "four four"
+      "four four"
+      "five six"
+      "seven seven"
+      "seven seven"
+      "eight nine"
+      "ten ten"
+      "ten ten"
+      "eleven twelve";
 
     .box {
       position: relative;
-      border-radius: 10px;
       overflow: hidden;
       filter: grayscale(1);
       transition: 0.3s;
+      cursor: zoom-in;
 
       &:hover {
         filter: grayscale(0);
@@ -58,7 +62,9 @@ body {
       }
 
       .box-img {
-        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
 
@@ -92,6 +98,12 @@ body {
     .box10 {
       grid-area: ten;
     }
+    .box11 {
+      grid-area: eleven;
+    }
+    .box12 {
+      grid-area: twelve;
+    }
   }
 }
 @media (min-width: 426px) {
@@ -105,7 +117,10 @@ body {
         "six six"
         "six six"
         "seven eight"
-        "nine ten";
+        "nine ten"
+        "eleven eleven"
+        "eleven eleven"
+        "twelve thirteen";
 
       .box {
         .serial-no {
@@ -123,9 +138,9 @@ body {
         "one one two three"
         "one one six six"
         "four five six six"
-        "seven eight nine nine"
-        "ten ten nine nine"
-        "ten ten eleven twelve";
+        "seven seven eight nine"
+        "seven seven ten ten"
+        "eleven twelve ten ten";
 
       .box {
         .serial-no {
